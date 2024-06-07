@@ -20,6 +20,10 @@ if (isset($_GET['edit_products'])) {
     $product_image2 = $row['product_image2'];
     $product_image3 = $row['product_image3'];
     $product_price = $row['product_price'];
+    // if($product_price < 1)
+    // {
+    //     echo "<script>alert('enter correct price');</script>";
+    // }
 
     //fetching category id
     $select_category = "Select * from categories where category_id=$category_id";

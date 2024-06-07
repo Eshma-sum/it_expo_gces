@@ -14,6 +14,11 @@ if (isset($_POST['insert_product'])) {
     $product_keywords = $_POST['product_keywords'];
     $product_categories = $_POST['product_categories'];
     $product_price = $_POST['product_price'];
+    if($product_price < 1)
+    {
+        echo "<script>alert('invalid price');</script>";
+        exit();
+    }
     $product_status = 'true';
 
     // accessing images
